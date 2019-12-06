@@ -52,39 +52,7 @@ export class RechercheComponent implements OnInit {
   
   rechercheNom(t:number){
     this.submitted=true;
-/*
-    for(let a of this.maq){
-      var test:boolean=true;
-     if(this.type==undefined){
-       if(this.type.value!=1) test=false;
-     }
-     if(this.prix!=undefined){
-      if(this.prix.value>=a.prix) test=false;
-    }
-    if(this.promo!=undefined){
-      if(this.promo.value==a.promo) test=false;
-    }
-    if(this.nom!=undefined){
-      if(a.nom.includes(this.nom.value)) test=false;
-    }
-    if(test==true) this.all.splice(this.all.findIndex((element) => element.ref==a.ref),1);
-    }
-    for(let a of this.dre){
-      var test:boolean=true;
-      if(this.type==undefined){
-        if(this.type.value!=2) test=false;
-      }
-      if(this.prix!=undefined){
-       if(this.prix.value>=a.prix) test=false;
-     }
-     if(this.promo!=undefined){
-       if(this.promo.value==a.promo) test=false;
-     }
-     if(this.nom!=undefined){
-       if(a.nom.includes(this.nom.value)) test=false;
-     }
-     if(test==true) this.all.splice(this.all.findIndex((element) => element.ref==a.ref),1);
-     }*/
+
      switch (t) {
       case 1:{this.all=this.maq.filter(Produits => Produits.nom.includes(this.nom.value))}break;
       case 2:{this.all=this.dre.filter(Produits => Produits.nom.includes(this.nom.value));}break;
